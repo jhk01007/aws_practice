@@ -1,0 +1,97 @@
+/* 회원가입 화면 전용 스타일 */
+.container {
+    width: 400px; /* 회원가입 화면에서 컨테이너 너비 설정 */
+    position: relative;
+}
+
+.signup-btn {
+    background-color: #007bff; /* 회원가입 버튼 색상 */
+    color: white;
+}
+
+.signup-btn:hover {
+    background-color: #0056b3; /* 회원가입 버튼 호버 색상 */
+}
+
+.profile-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    object-fit: cover;
+}
+
+.profile-image-upload {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.upload-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* 오류 메시지와 입력 필드 스타일 */
+.input-group {
+    position: relative;
+    margin-bottom: 15px; /* 입력 그룹 간의 여백 */
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.message {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: left; /* 왼쪽 정렬 */
+}
+
+.input-group.success input {
+    border-color: green; /* 성공 상태일 때 경계선 색상 */
+}
+
+.input-group.error input {
+    border-color: red; /* 오류 상태일 때 경계선 색상 */
+}
+
+.input-group.error .message {
+    color: red;
+    display: block; /* 오류 상태일 때 메시지를 보이게 설정 */
+}
+.input-group.success .message {
+    color: green;
+    display: block; /* 오류 상태일 때 메시지를 보이게 설정 */
+}

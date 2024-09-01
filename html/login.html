@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to Our Service</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>로그인</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="input-group">
+                <input type="text" id="username" name="username" placeholder="아이디">
+                <small class="error-message"></small> <!-- 오류 메시지 표시용 요소 -->
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="비밀번호">
+                <small class="error-message"></small> <!-- 오류 메시지 표시용 요소 -->
+            </div>
+            <button class="btn login-btn" id="login-btn">로그인</button>
+        </main>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+</html>

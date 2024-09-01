@@ -1,0 +1,40 @@
+/* 로그인 화면 전용 스타일 */
+.container {
+    width: 400px; /* 로그인 화면에서 컨테이너 너비 설정 */
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+/* 입력 필드 기본 스타일 */
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* 입력 필드 오류 시 스타일 */
+.input-group.error input {
+    border-color: red;
+}
+
+.input-group .error-message {
+    color: red;
+    font-size: 0.8rem;
+    display: none; /* 기본적으로 숨겨진 상태 */
+    text-align: left;
+}
+
+/* 오류 메시지 보이기 */
+.input-group.error .error-message {
+    display: block;
+}
+

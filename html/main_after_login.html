@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back!</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <!-- 로그인한 사용자의 아이디를 JavaScript로 동적으로 삽입할 예정입니다. -->
+            <h1><span id="user-id"></span>님, 환영합니다!</h1>
+        </header>
+
+        <main class="main-content">
+            <div class="button-container">
+                <button class="btn info-btn" onclick="viewProfile()">내 정보 확인하기</button>
+                <button class="btn logout-btn" onclick="logout()">로그아웃하기</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

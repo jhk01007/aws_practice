@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>내 프로필</h1>
+        </header>
+
+        <main class="main-content">
+            <form id="profile-form">
+                <div class="profile-image-container">
+                    <img id="profile-image-preview" src="../images/default-profile.webp" alt="프로필 이미지" class="profile-image">
+                    <label for="image" class="image-edit-button">
+                        <img src="../images/edit-icon.png" alt="수정 아이콘" class="edit-icon">
+                    </label>
+                    <input type="file" id="image" name="image" accept="image/*" style="display:none" onchange="previewImage(event)">
+                </div>
+                <div class="info-group">
+                    <label for="memberId" class="input-label">아이디:</label>
+                    <span id="memberId-text" class="info-text">aaa123</span>
+                </div>
+                <div class="info-group">
+                    <label for="phoneNum" class="input-label">전화번호:</label>
+                    <span id="phoneNum-text" class="info-text">010-1234-5678</span>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="btn" onclick="goMain()">메인으로</button>
+                    <button type="button" class="btn" id="edit-btn" onclick="editProfile()" disabled>수정하기</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script src="../js/profile.js"></script>
+</body>
+</html>
