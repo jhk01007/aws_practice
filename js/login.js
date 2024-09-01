@@ -30,7 +30,7 @@ document.getElementById('login-btn').addEventListener('click', function (event) 
     };
 
     // 서버에 로그인 요청
-    axios.post('http://localhost:8080/members/login', loginData, {
+    axios.post(`${config.API_BASE_URL}/members/login`, loginData, {
         headers: {
             'Content-Type': 'application/json'
         },

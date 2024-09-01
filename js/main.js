@@ -1,6 +1,8 @@
+
+
 // 서버에 세션 검증 요청을 보내는 함수
 function checkSession() {
-    axios.get('http://localhost:8080/members/check-session', { withCredentials: true }) // 서버 요청 시 쿠키도 함께 전송
+    axios.get(`${config.API_BASE_URL}/members/check-session`, { withCredentials: true }) // 서버 요청 시 쿠키도 함께 전송
         .then(response => {
             if (response.status === 200 && response.data.isValid) {
                 // 세션이 유효한 경우: 로그인한 사용자용 화면 로드
@@ -38,7 +40,7 @@ function viewProfile() {
 // 로그아웃 처리
 function logout() {
     alert("로그아웃합니다.")
-    axios.post('http://localhost:8080/members/logout', {}, { withCredentials: true }) // 서버 요청 시 쿠키도 함께 전송
+    axios.post(`${config.API_BASE_URL}/members/logout`, {}, { withCredentials: true }) // 서버 요청 시 쿠키도 함께 전송
         .then(response => {
             location.reload();
         })
