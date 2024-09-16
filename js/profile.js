@@ -17,7 +17,7 @@ function previewImage(event) {
 
 async function loadProfile() {
     try {
-        const response = await axios.get(`${config.API_BASE_URL}/members/memberInfo`, { withCredentials: true });
+        const response = await axios.get(`${process.env.API_BASE_URL}/members/memberInfo`, { withCredentials: true });
         return response.data; // axios 요청이 완료된 후 데이터를 반환
     } catch (error) {
         console.error('서버 요청 오류:', error);
@@ -51,7 +51,7 @@ function editProfile() {
             const formData = new FormData();
             formData.append('image', imageInput.files[0]);
 
-            axios.post(`${config.API_BASE_URL}/members/changeProfile`, formData, {
+            axios.post(`${process.env.API_BASE_URL}/members/changeProfile`, formData, {
                 withCredentials: true,
                 headers: {
                     'Content-Type': 'multipart/form-data'

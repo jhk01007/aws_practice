@@ -22,7 +22,7 @@ function checkMemberId() {
     if (!memberId) return; // 입력이 비어 있으면 중복 확인을 하지 않음
 
     // 서버에 아이디 중복 확인 요청
-    axios.get(`${config.API_BASE_URL}/members/checkIdDuplicate?memberId=${memberId}`)
+    axios.get(`${process.env.API_BASE_URL}/members/checkIdDuplicate?memberId=${memberId}`)
         .then(response => {
             if (response.data.available) {
                 // 사용 가능한 아이디
@@ -137,7 +137,7 @@ document.getElementById('signup-form').addEventListener('submit', async function
 
 async function requestSignup(formData) {
     // 서버로 데이터 전송
-    axios.post(`${config.API_BASE_URL}/members/signup`, formData, {
+    axios.post(`${process.env.API_BASE_URL}/members/signup`, formData, {
         headers: {
             'Content-Type': 'multipart/form-data'
         }
