@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up to Our Service</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/signup.css"> <!-- 회원가입 전용 CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/config.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>회원가입</h1>
+            <button class="close-button">&times;</button> <!-- 닫기 버튼 추가 -->
+        </header>
+
+        <main class="main-content">
+            <form id="signup-form">
+                <div class="profile-image-container">
+                    <img id="profile-image-preview" src="../images/default-profile.webp" alt="프로필 이미지" class="profile-image">
+                    <label for="image" class="profile-image-upload">
+                        <img src="../images/upload-icon.png" alt="업로드 아이콘" class="upload-icon">
+                    </label>
+                    <input type="file" id="image" name="image" accept="image/*" style="display:none" onchange="previewImage(event)">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="memberId" name="memberId" placeholder="아이디" onblur="checkMemberId()">
+                    <small id="memberId-message" class="message"></small> <!-- 아이디 중복 확인 메시지 -->
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" name="password" placeholder="비밀번호">
+                    <small id="password-message" class="message"></small>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="phoneNum" name="phoneNum" placeholder="전화번호">
+                    <small id="phoneNum-message" class="message"></small>
+                </div>
+                <button type="submit" class="btn signup-btn">가입하기</button>
+            </form>
+        </main>
+    </div>
+    <script src="../js/signup.js"></script>
+</body>
+</html>
